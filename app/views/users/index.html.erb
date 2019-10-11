@@ -1,0 +1,14 @@
+<h1> How much coffee do you drink? </h1>
+<%= link_to "coffee counter", new_user_path %>
+<h1><% @users.inspect %></h1>
+<br/>
+
+<% @users.each do |user| %>
+  <div>
+    <i> Name: <%= user.name %></i><br/>
+    <i>Age:   <%= user.age %></i><br />
+    <i>Coffee cups per day: <%= user.number_of_coffee %></i><br />
+  </div>
+
+  <hr />
+<% end %>
